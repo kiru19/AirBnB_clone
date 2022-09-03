@@ -34,6 +34,7 @@ class FileStorageTests(unittest.TestCase):
         all_objs = storage.all()
 
         key = bm_dict['__class__'] + "." + bm_dict['id']
+
         self.assertEqual(key in all_objs, True)
         self.assertEqual(bm_dict['my_name'], "First name")
 
@@ -81,8 +82,7 @@ class FileStorageTests(unittest.TestCase):
         msg = "save() takes 1 positional argument but 2 were given"
         with self.assertRaises(TypeError) as e:
             FileStorage.save(self, 100)
-
-            self.assertEqual(str(e.exception), msg)
+        self.assertEqual(str(e.exception), msg)
 
     def test_save_FileStorage(self):
         """ Test if 'new' method is working good """
@@ -94,6 +94,6 @@ class FileStorageTests(unittest.TestCase):
         new = var2[new_key]
         for key in new:
             self.assertEqual(var1[key], new[key])
-
 if __name__ == '__main__':
-    unittest.main() 
+    unittest.main()
+        
