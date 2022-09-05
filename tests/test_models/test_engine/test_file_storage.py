@@ -7,6 +7,7 @@ from models import storage
 import os
 import json
 
+
 class FileStorageTests(unittest.TestCase):
     """ Suite of File Storage Tests """
 
@@ -94,6 +95,7 @@ class FileStorageTests(unittest.TestCase):
         new = var2[new_key]
         for key in new:
             self.assertEqual(var1[key], new[key])
+
+
 if __name__ == '__main__':
     unittest.main()
-        

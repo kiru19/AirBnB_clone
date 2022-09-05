@@ -6,6 +6,7 @@ import unittest
 from models.place import Place
 import datetime
 
+
 class TestPlace(unittest.TestCase):
     """Tests instances and methods from place class"""
     p = Place()
@@ -51,5 +52,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(self.p.id, str)
         self.assertIsInstance(self.p.created_at, datetime.datetime)
         self.assertIsInstance(self.p.updated_at, datetime.datetime)
+
+
 if __name__ == '__main__':
     unittest.main()

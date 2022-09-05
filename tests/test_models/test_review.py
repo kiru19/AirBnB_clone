@@ -6,6 +6,7 @@ import unittest
 from models.review import Review
 import datetime
 
+
 class TestReview(unittest.TestCase):
     """Tests instances and methods from Review class"""
     r = Review()
