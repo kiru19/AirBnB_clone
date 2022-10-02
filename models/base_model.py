@@ -1,7 +1,5 @@
 #!/usr/bin/pyhon3
-"""
-Parent class that will inherit
-"""
+"Parent class that will be inherited from"
 import uuid
 from datetime import datetime
 from models import storage
